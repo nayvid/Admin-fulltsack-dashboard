@@ -18041,7 +18041,7 @@ export const dataAffiliateStat = [
     },
     {
       _id: "63701cc1f03239b7f700000e",
-      name: "Shelly",
+      name: "Divyan",
       email: "swelbeck12@ycombinator.com",
       password: "RSjzmAjnq",
       city: "Sangoleng",
@@ -18062,7 +18062,7 @@ export const dataAffiliateStat = [
     },
     {
       _id: "63701cc1f03239b7f700000f",
-      name: "Amil",
+      name: "Divyan_30",
       email: "aweben13@feedburner.com",
       password: "GpOhlbh0G",
       city: "Primorskiy",

@@ -52,10 +52,8 @@ export const tokensDark = {
       const reversedObj = {};
       for (let i = 0; i < length; i++) {
         reversedObj[keys[i]] = values[length - i - 1];
-        console.log(reversedObj);
       }
       reversedTokens[key] = reversedObj;
-      console.log(reverseTokens);
     });
     return reversedTokens;
   }

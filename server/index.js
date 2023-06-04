@@ -12,7 +12,10 @@ import salesRoutes from "./routes/sales.js";
 
 //MOCK DATA IMPORTS INTO MONGO DB
 import User from "./models/User.js";
-import {dataUser} from "./data/index.js";
+import Product from "./models/Product.js";
+import ProductStat from "./models/ProductStat.js";
+import {dataProduct, dataProductStat, dataUser} from "./data/index.js";
+
 
 
 // CONFIGURATION
@@ -42,6 +45,8 @@ mongoose.connect(process.env.MONGO_URL,{
     app.listen(PORT,() => console.log(`Server Port:${PORT}`));
 
     // ADD DATA ONLY ONE TIME
+    // Product.insertMany(dataProduct);
+    // ProductStat.insertMany(dataProductStat);
     // User.insertMany(dataUser);
 })
 .catch((error) => console.log(`${error} did not connect`));

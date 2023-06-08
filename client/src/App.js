@@ -7,7 +7,7 @@ import { BrowserRouter,Navigate,Route,Routes } from 'react-router-dom';
 import Layout from "scenes/layout";
 import Dashboard from 'scenes/dashboard';
 import Products from "scenes/products";
-
+import Customers from "scenes/customers";
 
 function App() {
   //1.to access the state management global variable across all pages
@@ -28,13 +28,12 @@ function App() {
                 <Route path="/" element={<Navigate to ="/dashboard" replace />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/products" element={<Products/>} />
+                <Route path="/customers" element={<Customers/>} />
               </Route>
             </Routes>
         </ThemeProvider>
     </BrowserRouter>
-    
   </div>);
-
 }
 
 export default App;

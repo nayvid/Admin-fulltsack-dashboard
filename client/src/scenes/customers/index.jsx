@@ -19,7 +19,7 @@ const Customers = () => {
     
     {
         field:"name",
-        headerName:"ID",
+        headerName:"Name",
         flex:0.5,
     },
 

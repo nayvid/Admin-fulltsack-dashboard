@@ -28,7 +28,6 @@ const Transactions = () => {
 
         }
     )
-    console.log('data',data);
     const columns = [
         {
           field: "_id",

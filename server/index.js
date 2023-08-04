@@ -15,8 +15,9 @@ import User from "./models/User.js";
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
 import Transaction from "./models/Transaction.js";
-import {dataProduct, dataProductStat, dataUser,dataTransaction} from "./data/index.js";
-
+import {dataProduct, dataProductStat, dataUser,dataTransaction,dataOverallStat, dataAffiliateStat} from "./data/index.js";
+import OverallStat from "./models/OverallStat.js";
+import AffiliateStat from "./models/AffiliateStat.js";
 
 
 // CONFIGURATION
@@ -49,6 +50,9 @@ mongoose.connect(process.env.MONGO_URL,{
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // User.insertMany(dataUser);
-    // Transaction.insertMany(dataTransaction);
+    //Transaction.insertMany(dataTransaction);
+    // OverallStat.insertMany(dataOverallStat);
+    // AffiliateStat.insertMany(dataAffiliateStat);
+
 })
 .catch((error) => console.log(`${error} did not connect`));

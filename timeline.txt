@@ -27,3 +27,12 @@
 --completed transaction section
 --added pagination in transaction section
 --added routes,controllers for transaction API
+
+21/6/2023
+--completed route & controller for geography section
+--added geography index jsx for frontend
+--stopped at 4.19.46
+
+22/7/2023
+--completed frontend & backend for performance section
+--stopped at 6.05.52

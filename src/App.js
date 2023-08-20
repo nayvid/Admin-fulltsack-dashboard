@@ -1,4 +1,3 @@
-import './App.css';
 import { useEffect } from 'react';
 import {
   BrowserRouter,
@@ -10,6 +9,7 @@ import Home from "./scenes/home/Home";
 import ItemDetails from './scenes/itemDetails/itemDetails'
 import Confirmation from './scenes/checkout/Confirmation';
 import Checkout from './scenes/checkout/Checkout';
+import CartMenu from './scenes/global/CartMenu';
 
 
 const ScrollToTop = () => {
@@ -33,6 +33,7 @@ function App() {
           <Route path='item/:itemId' element={<ItemDetails />}/>
           <Route path='checkout' element={<Checkout />} />
           <Route path='checkout/success' element={<Confirmation />} />
+          <CartMenu/>
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,7 +1,7 @@
-import {createTheme} from '@mui/icons-material/styles';
+import {createTheme} from '@mui/material/styles';
 
 export const shades = {
-black: {
+primary: {
     100: "#ffffffcc",
     200: "#ffffff99",
     300: "#ffffff66",

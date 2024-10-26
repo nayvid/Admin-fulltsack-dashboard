@@ -60,6 +60,7 @@ export const getUser = async (req,res) =>
           thisMonthStats,
           todayStats,
           transactions,
+          newTransaction
         });
       } catch (error) {
         res.status(404).json({ message: error.message });

@@ -3,9 +3,9 @@ import {useDispatch,useSelector} from 'react-redux';
 import { Badge,Box,IconButton } from '@mui/material';
 import {
   PersonOutline,
-  ShoppingBagOutLined,
+  ShoppingBagOutlined,
   MenuOutlined,
-  SearchOutlined
+  SearchOutlined,
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { shades } from '../../theme';
@@ -21,7 +21,7 @@ const Navbar = () => {
       alignItems="center"
       width="100%"
       height="60px"
-      backgroundColor="rgba(255,255,25,0.95)"
+      backgroundColor="rgba(255, 255, 255, 0.95)"
       color="black"
       position="fixed"
       top="0"
@@ -39,9 +39,10 @@ const Navbar = () => {
         <Box
         onClick={() => navigate("/")}
         sx={{'&:hover' : { cursor:"pointer"}}}
-        color={shades.secondary[500]}
+        color={shades.secondary[900]}
+        fontSize="30px"
         >
-          E-Commerce
+          Nike
         </Box>
         <Box
           display="flex"
@@ -64,20 +65,23 @@ const Navbar = () => {
                 right: 5,
                 top: 5,
                 padding:"0 4px",
-                height:"14px",
-                minWidth:"13px",
+                height:"20px",
+                minWidth:"15px",
               },
             })}
           >
           <IconButton onClick={() =>dispatch(setIsCartOpen({}))}
           sx={{color:"black"}}>
-            <ShoppingBagOutLined/>
+            <ShoppingBagOutlined/>
           </IconButton>
           </Badge>
+          <IconButton sx={{ color: "black" }}>
+          <MenuOutlined />
+          </IconButton>
+          </Box>
         </Box>
-      </Box>
       </Box>
   )
 }
 
-export default Navbar
+export default Navbar;

@@ -12,7 +12,7 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         setItems:(state,action) => {
-            state.items = action.payload
+            state.items = action.payload;
         },
 
         addToCart:(state,action) => {
@@ -25,16 +25,26 @@ export const cartSlice = createSlice({
 
         increaseCount: (state,action) => {
             state.cart = state.cart.map((item) => {
-                if(item.id === action.payload.id && item.count > 1) {
-                    item.count--;
+                if(item.id === action.payload.id) {
+                    item.count++;
                 }
                 return item;
             })
         },
-        setIsCartOpen:(state) => {
+
+        decreaseCount:(state,action) => {
+            state.cart= state.cart.map((item) => {
+                if(item.id === action.payload.id && item.count > 1) {
+                    item.count--;
+                }
+                return item;
+            });
+        },
+        
+        setIsCartOpen: (state) => {
             state.isCartOpen = !state.isCartOpen;
-        }
-    }
+          },
+        },
 });
 
 //function to carry out CRUD operation for cart items

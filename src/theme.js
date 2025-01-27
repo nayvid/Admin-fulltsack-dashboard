@@ -39,41 +39,41 @@ neutral: {
 export const theme = createTheme({
     palette : {
         primary : {
-            main: shades.primary[500]
+            main: shades.primary[500],
         },
         secondary : {
-            main: shades.secondary[500]
+            main: shades.secondary[500],
         },
         neutral: {
             dark: shades.neutral[700],
             main: shades.neutral[500],
-            ligt: shades.neutral[100]
-        }
+            light: shades.neutral[100],
+        },
 
     },
 
     typography : {
-        fontFamily: ["Fauna One","sans-serif"].join(","),
-        fontSize:11,
+        fontFamily: ["Montserrat","sans-serif"].join(","),
+        fontSize:13,
         h1: {
-            fontFamily: ["Cinzel", "sans-serif"].join(","),
+            fontFamily: ["Montserrat", "sans-serif"].join(","),
             fontSize:48,
         },
         h2: {
-            fontFamily: ["Cinzel", "sans-serif"].join(","),
+            fontFamily: ["Montserrat", "sans-serif"].join(","),
             fontSize:36,
         },
         h3: {
-            fontFamily: ["Cinzel", "sans-serif"].join(","),
+            fontFamily: ["Montserrat", "sans-serif"].join(","),
             fontSize:20,
         },
         h4: {
-            fontFamily: ["Cinzel", "sans-serif"].join(","),
+            fontFamily: ["Montserrat", "sans-serif"].join(","),
             fontSize:14,
         },
 
-    }
-})
+    },
+});
 
 
 

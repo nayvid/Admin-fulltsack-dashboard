@@ -43,7 +43,49 @@ export const cartSlice = createSlice({
         
         setIsCartOpen: (state) => {
             state.isCartOpen = !state.isCartOpen;
-          },
+        },
+
+         // Auth reducers
+        loginStart: (state) => {
+            state.auth.loading = true;
+            state.auth.error = null;
+        },
+        loginSuccess: (state, action) => {
+            state.auth.loading = false;
+            state.auth.user = action.payload.user;
+            state.auth.token = action.payload.token;
+            state.auth.isAuthenticated = true;
+            localStorage.setItem('token', action.payload.token);
+        },
+        loginFailure: (state, action) => {
+            state.auth.loading = false;
+            state.auth.error = action.payload;
+            state.auth.isAuthenticated = false;
+        },
+        logout: (state) => {
+            state.auth.user = null;
+            state.auth.token = null;
+            state.auth.isAuthenticated = false;
+            localStorage.removeItem('token');
+        },
+
+            // New auth reducers
+        registerStart: (state) => {
+            state.auth.loading = true;
+            state.auth.error = null;
+        },
+        registerSuccess: (state, action) => {
+            state.auth.loading = false;
+            state.auth.user = action.payload.user;
+            state.auth.token = action.payload.token;
+            state.auth.isAuthenticated = true;
+            localStorage.setItem('token', action.payload.token);
+        },
+        registerFailure: (state, action) => {
+            state.auth.loading = false;
+            state.auth.error = action.payload;
+            state.auth.isAuthenticated = false;
+        },
         },
 });
 
@@ -54,7 +96,14 @@ export const {
     removeFromCart,
     increaseCount,
     decreaseCount,
+    registerStart,
+    registerSuccess, 
+    registerFailure,
     setIsCartOpen,
+    loginStart,
+    loginSuccess,
+    loginFailure,
+    logout,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

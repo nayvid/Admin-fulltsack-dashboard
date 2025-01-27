@@ -12,6 +12,9 @@ import Checkout from './scenes/checkout/Checkout';
 import CartMenu from "./scenes/global/CartMenu";
 import Navbar from "./scenes/global/Navbar";
 import Footer from './scenes/global/Footer';
+import SignUpForm from './components/SignUpForm'; 
+import LoginForm from './components/LoginForm';
+import ProtectedRoute from './components/routes/ProtectedRoute';
 
 const ScrollToTop = () => {
   const {pathname} = useLocation();
@@ -33,8 +36,15 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='item/:itemId' element={<ItemDetails />}/>
-          <Route path="checkout" element={<Checkout />} />
+          <Route path="checkout" element={
+              <ProtectedRoute> 
+                <Checkout />
+              </ProtectedRoute>
+            } 
+            />
           <Route path='checkout/success' element={<Confirmation />} />
+          <Route path="signup" element={<SignUpForm />} />
+          <Route path="/login" element={<LoginForm />} />
         </Routes>
         <CartMenu />
         <Footer />
